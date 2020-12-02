@@ -1,0 +1,356 @@
+==24700== Memcheck, a memory error detector
+==24700== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24700== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==24700== Command: ./my_ls -l include lib
+==24700== 
+include:
+total 8
+==24700== Use of uninitialised value of size 8
+==24700==    at 0x48B657B: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4998761: __nscd_getpwuid_r (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4930C5C: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48B658D: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4998761: __nscd_getpwuid_r (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4930C5C: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D0AD3: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E38CF8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E3610D: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Use of uninitialised value of size 8
+==24700==    at 0x48B657B: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48D0533: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E38CF8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E3610D: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48B658D: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48D0533: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E38CF8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E3610D: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D11A0: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E38CF8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E3610D: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D06A3: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E38CF8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E3610D: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==24700==    at 0x4966561: send (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E348C0: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E35275: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E361A6: _nss_sss_getpwuid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700==  Address 0x1ffefffbb4 is on thread 1's stack
+==24700==  in frame #3, created by _nss_sss_getpwuid_r (???:)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x5649E1E: _nss_files_getpwuid_r (in /usr/lib64/libnss_files-2.29.so)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x5690316: _nss_systemd_getpwuid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x5690322: _nss_systemd_getpwuid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x5690402: _nss_systemd_getpwuid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x5690593: _nss_systemd_getpwuid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x569034E: _nss_systemd_getpwuid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x4930BE2: getpwuid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x493033A: getpwuid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401803: my_lls (my_ls.c:91)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Use of uninitialised value of size 8
+==24700==    at 0x48B657B: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4998EC1: __nscd_getgrgid_r (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492EABC: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48B658D: _itoa_word (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4998EC1: __nscd_getgrgid_r (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492EABC: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D0AD3: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E391B8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E36E0F: _nss_sss_getgrgid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D11A0: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E391B8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E36E0F: _nss_sss_getgrgid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x48D06A3: __vfprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x48E32C9: __vsnprintf_internal (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x49731A0: __snprintf_chk (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E391B8: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E36E0F: _nss_sss_getgrgid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==24700==    at 0x4966561: send (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x4E348C0: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E35275: ??? (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x4E36EDA: _nss_sss_getgrgid_r (in /usr/lib64/libnss_sss.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700==  Address 0x1ffefffb64 is on thread 1's stack
+==24700==  in frame #3, created by _nss_sss_getgrgid_r (???:)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x564999E: _nss_files_getgrgid_r (in /usr/lib64/libnss_files-2.29.so)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x568F906: _nss_systemd_getgrgid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x568F912: _nss_systemd_getgrgid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x568F9F2: _nss_systemd_getgrgid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x568FB5B: _nss_systemd_getgrgid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x568F93E: _nss_systemd_getgrgid_r (in /usr/lib64/libnss_systemd.so.2)
+==24700==    by 0x492EA1C: getgrgid_r@@GLIBC_2.2.5 (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x492E09A: getgrgid (in /usr/lib64/libc-2.29.so)
+==24700==    by 0x401814: my_lls (my_ls.c:92)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401631: my_perm (my_ls.c:64)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401651: my_perm (my_ls.c:65)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401671: my_perm (my_ls.c:66)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x40168F: my_perm (my_ls.c:67)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+x==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x4016AD: my_perm (my_ls.c:68)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x4016CB: my_perm (my_ls.c:69)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x4016E9: my_perm (my_ls.c:70)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+x==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401707: my_perm (my_ls.c:71)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401725: my_perm (my_ls.c:72)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+w==24700== Conditional jump or move depends on uninitialised value(s)
+==24700==    at 0x401743: my_perm (my_ls.c:73)
+==24700==    by 0x40186B: my_lls (my_ls.c:93)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700== 
+-==24700== Invalid read of size 8
+==24700==    at 0x401877: my_lls (my_ls.c:94)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==24700== 
+==24700== 
+==24700== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==24700==  Access not within mapped region at address 0x0
+==24700==    at 0x401877: my_lls (my_ls.c:94)
+==24700==    by 0x401283: exec_mylls (main.c:35)
+==24700==    by 0x401396: main (main.c:55)
+==24700==  If you believe this happened as a result of a stack
+==24700==  overflow in your program's main thread (unlikely but
+==24700==  possible), you can try to increase the size of the
+==24700==  main thread stack using the --main-stacksize= flag.
+==24700==  The main thread stack size used in this run was 8388608.
+==24700== 
+==24700== HEAP SUMMARY:
+==24700==     in use at exit: 38,017 bytes in 25 blocks
+==24700==   total heap usage: 112 allocs, 87 frees, 92,325 bytes allocated
+==24700== 
+==24700== LEAK SUMMARY:
+==24700==    definitely lost: 113 bytes in 10 blocks
+==24700==    indirectly lost: 0 bytes in 0 blocks
+==24700==      possibly lost: 0 bytes in 0 blocks
+==24700==    still reachable: 37,904 bytes in 15 blocks
+==24700==         suppressed: 0 bytes in 0 blocks
+==24700== Rerun with --leak-check=full to see details of leaked memory
+==24700== 
+==24700== Use --track-origins=yes to see where uninitialised values come from
+==24700== For lists of detected and suppressed errors, rerun with: -s
+==24700== ERROR SUMMARY: 191 errors from 37 contexts (suppressed: 0 from 0)
